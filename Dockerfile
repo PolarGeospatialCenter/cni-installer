@@ -10,8 +10,10 @@ RUN mkdir /install && cp /go/src/plugins/bin/* /install
 
 FROM alpine
 
-ADD https://github.com/intel/multus-cni/releases/download/v2.0/multus-cni_v2.0_linux_amd64.tar.gz .
-RUN mkdir /install && tar -zxf multus-cni_v2.0_linux_amd64.tar.gz  && mv multus-cni_v2.0_linux_amd64/multus-cni /install/
+ENV MULTUS_VERSION v3.1
+
+ADD https://github.com/intel/multus-cni/releases/download/${MULTUS_VERSION}/multus-cni_${MULTUS_VERSION}_linux_amd64.tar.gz .
+RUN mkdir /install && tar -zxf multus-cni_${MULTUS_VERSION}_linux_amd64.tar.gz  && mv multus-cni_${MULTUS_VERSION}_linux_amd64/multus-cni /install/
 
 FROM alpine
 
