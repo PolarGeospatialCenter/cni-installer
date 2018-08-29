@@ -15,7 +15,7 @@ ENV MULTUS_VERSION v3.1
 ADD https://github.com/intel/multus-cni/releases/download/${MULTUS_VERSION}/multus-cni_${MULTUS_VERSION}_linux_amd64.tar.gz .
 RUN mkdir /install && tar -zxf multus-cni_${MULTUS_VERSION}_linux_amd64.tar.gz  && mv multus-cni_${MULTUS_VERSION}_linux_amd64/multus-cni /install/
 
-FROM polargeospatialcenter/k8s-ipam:2018.08.29.r00
+FROM polargeospatialcenter/k8s-ipam:2018.08.29.r01
 
 FROM alpine
 
