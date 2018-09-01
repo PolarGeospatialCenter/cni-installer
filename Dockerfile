@@ -12,7 +12,7 @@ FROM quay.io/polargeospatialcenter/multus-cni:k8s-fallback-networks
 WORKDIR /install/
 RUN cp /usr/src/multus-cni/bin/multus multus-cni
 
-FROM polargeospatialcenter/k8s-ipam:2018.09.01.r00
+FROM quay.io/polargeospatialcenter/k8s-ipam:2018.09.01.r00
 
 FROM alpine
 
